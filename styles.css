@@ -93,8 +93,6 @@ nav ul li {
   z-index: 1001;  /* Tornando o botão visível acima de outros elementos */
 }
 
-
-
 .whatsapp-button i {
   font-size: 22px;
   margin-right: 8px;
@@ -106,105 +104,87 @@ nav ul li {
   color: white;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Dosis", serif;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #0D1B2A;
-  padding: 40px 0;
-  z-index: 1000;
-  width: 100%;
-}
-
-a {
-  text-decoration: none;
-}
-
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  padding-right: 50px;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 22px;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
+.logo{
+  font-family: "Audiowide", serif;
+  font-size: 30px;
   color: yellow;
 }
 
-section {
-  height: 100vh;
-  padding: 20px;
+.card {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: center; /* Centraliza o texto verticalmente */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 800px;
+  margin: 20px auto; /* Centraliza o card na página */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+  max-width: 300px; /* Limita a largura da imagem */
+  border-radius: 8px;
+  margin-right: 16px; /* Espaçamento entre a imagem e o texto */
+}
+
+.card-info {
+  display: flex;
   flex-direction: column;
 }
 
-#section1 {
-  background-color: #1B263B;
-}
-
-#section2 {
-  background-color: #415A77;
-}
-
-#section3 {
-  background-color: #778DA9;
-}
-
-#section4 {
-  background-color: rgb(255, 255, 255);
-}
-
-nav ul li {
-  display: inline-flex;
-  align-items: center;
-}
-
-.whatsapp-button {
-  background-color: rgb(139, 236, 139);
-  padding: 8px 15px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  color: #ffffff;
-  font-size: 22px;
-  text-decoration: none;
+.card-info h1 {
   margin: 0;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border: 3px solid black;
+  font-size: 1.5rem;
+  color: #333;
 }
 
-.whatsapp-button i {
-  font-size: 22px;
-  margin-right: 8px;
-  margin-top: 4px;
+.card-info p {
+  margin: 8px 0 0;
+  color: #666;
 }
 
-.whatsapp-button:hover {
-  background-color: black;
-  color: white;
+
+.footer-container {
+  background-color: #0D1B2A;
+  padding: 4rem 0;
 }
+
+.footer {
+  width: 80%;
+  height: 20vh;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.footer-heading {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4rem;
+}
+
+.footer-heading h2 {
+  margin-bottom: 1.3rem;
+}
+
+.footer-heading a {
+  margin-bottom: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    width: 80%; 
+    flex-direction: column; 
+    height: auto; 
+  }
+
+  .footer-heading {
+    margin-right: 0; 
+    margin-bottom: 2rem; 
+  }
+}
+
+
