@@ -56,7 +56,7 @@ nav {
 }
 
 .whatsapp-button {
-  background-color: greenyellow;
+  background-color: darkblue;
   border: 2px;
   border-radius: 10px;
   padding: 12px 20px;
@@ -81,6 +81,38 @@ section {
 
 #inicio {
   background: #f4f4f4;
+  background-image: url('assets/portao1.webp'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color: white;
+  position: relative;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  font-size: 24px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#inicio.visible {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+#inicio {
+  opacity: 0;
+  transform: scale(1.1);
 }
 
 #servicos {
@@ -152,3 +184,86 @@ section {
       margin-top: 1rem;
   }
 }
+
+.card-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.card-title{
+  display: flex;
+  justify-content: center;  
+}
+
+.card-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  border-radius: 10px;
+}
+
+.card-image{
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.card-description{
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 30px;
+  flex-grow: 0;
+  margin-bottom: 30px;
+}
+
+.whatsapp-service{
+  background-color: darkblue;
+  border: 2px;
+  color: white;
+  border-radius: 10px;
+  padding: 12px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.whatsapp-service{
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.whatsapp-service:hover{
+  background-color: black;
+  color: white;
+}
+/* >Da pra melhorar essa parte aqui mobiles< */
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr; /* Ajusta para uma única coluna */
+    gap: 40px; /* Reduz o espaçamento entre os cards */
+  }
+
+  .card-content {
+    flex-direction: column; /* Alinha a imagem e o texto verticalmente */
+    text-align: center;
+  }
+
+  .card-image {
+    width: 100%; /* Ajusta a imagem para ocupar toda a largura */
+    height: auto;
+  }
+
+  .card-description {
+    font-size: 24px; /* Ajusta o tamanho da fonte para melhor leitura */
+    margin: 15px;
+  }
+}
+
+
+
+
+
