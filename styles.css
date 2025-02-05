@@ -13,7 +13,7 @@ body {
 
 /* Estilos do cabeçalho e navegação */
 header {
-  background: #333;
+  background: #b61321;
   color: #fff;
   padding: 1rem 0;
   position: sticky;
@@ -61,7 +61,7 @@ nav {
 }
 
 .nav-links li a:hover {
-  text-decoration: none;
+  text-decoration: none
 }
 
 .whatsapp-button {
@@ -194,6 +194,10 @@ section {
   }
 }
 
+.section-title{
+  font-size: 60px;
+}
+
 .card-container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -205,6 +209,8 @@ section {
 .card-title{
   display: flex;
   justify-content: center;  
+  font-size: 25px;
+  margin-bottom: 15px;
 }
 
 .card-content{
@@ -221,6 +227,12 @@ section {
   overflow: hidden;
   border-radius: 10px;
   flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover .card-image {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card-description{
